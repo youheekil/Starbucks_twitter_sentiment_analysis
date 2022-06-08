@@ -33,6 +33,11 @@ from sparknlp.base import *
 
 # COMMAND ----------
 
+# MAGIC %md 
+# MAGIC # Spark NLP
+
+# COMMAND ----------
+
 # Create pre-processing stages
 
 # Stage 1: DocumentAssembler as entry point
@@ -113,6 +118,11 @@ tweet_df = spark.sql("SELECT * FROM tweet_data")
 
 # COMMAND ----------
 
+# MAGIC %md 
+# MAGIC ## Normalized
+
+# COMMAND ----------
+
 # Check pre-processing pipeline
 cleanup_pipeline = Pipeline(stages=[documentAssembler, documentNormalizer])
 empty_df = spark.createDataFrame([['']]).toDF("value")
@@ -120,6 +130,11 @@ prep_pipeline_model = cleanup_pipeline.fit(empty_df)
  
 result = prep_pipeline_model.transform(tweet_df)
 result.select('normalizedDocument.result').show(truncate=False)
+
+# COMMAND ----------
+
+# MAGIC %md 
+# MAGIC ## Token
 
 # COMMAND ----------
 
@@ -133,6 +148,16 @@ result = prep_pipeline_model.transform(tweet_df)
 
 # COMMAND ----------
 
+# MAGIC %md 
+# MAGIC # WordCloud 
+
+# COMMAND ----------
+
+# MAGIC %md 
+# MAGIC ## Negative Sentiment
+
+# COMMAND ----------
+
 # Word cloud for negative tweets
 neg = tweet_df.filter(tweet_df.sentiment == "Negative").toPandas()
 text = " ".join(i for i in neg.processed_text)
@@ -143,6 +168,11 @@ plt.figure( figsize=(15,10))
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
 plt.show()
+
+# COMMAND ----------
+
+# MAGIC %md 
+# MAGIC ## Positive Sentiment
 
 # COMMAND ----------
 
