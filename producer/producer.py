@@ -9,10 +9,10 @@ import time
 import random
 # import os
 
-CONSUMER_KEY = "hdyyiqeXwzYGdvgOksE0y1jFN"
-CONSUMER_SECRET = "XDlsCaUMzU945kK83hHdAKU72o9yZA0QqpzyBVfwnVzk5ZSpIM"
-ACCESS_TOKEN_KEY = "1499264663028400135-YJPiZC5XSROpHVw9lFP50DG9wQrPK1"
-ACCESS_TOKEN_SECRET = "tJKTHv1KALomtjyBuYoE4ZPwVaDb8Q8F2CLHWanucJreo"
+CONSUMER_KEY = "xx"
+CONSUMER_SECRET = "xx"
+ACCESS_TOKEN_KEY = "xx"
+ACCESS_TOKEN_SECRET = "xx"
 
 
 if __name__ == "__main__":
@@ -77,34 +77,6 @@ if __name__ == "__main__":
                 #on_delivery=acked,
         )
 
-
-
-
-    #api = TwitterAPI(
-    #    CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN_KEY, ACCESS_TOKEN_SECRET
-    #)
-    """
-
-
-    r = api.request("statuses/filter", 
-        {"track": 'starbucks', 
-        "languages": "en", 
-        "location": 'US'})
-
-    for item in r:
-        time.sleep(2)
-        record_key = str(item["id"])
-        record_value = json.dumps(item['text'])
-        print("Producing record: {}\t{}".format(record_key, record_value))
-        # partition = random.randint(1, 1)
-        producer.produce(
-            topic=topic,
-            key=record_key, 
-            value=record_value
-            #on_delivery=acked,
-        )
-        #producer.poll(0)
-    """
 
     producer.flush()
 
