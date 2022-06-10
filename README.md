@@ -1,4 +1,3 @@
-# Starbucks Twitter Sentiment Analysis 
 
 
 <h1 align="center">Starbucks Twitter Sentiment Analysis </h1>
