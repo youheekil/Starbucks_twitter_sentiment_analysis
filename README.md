@@ -2,7 +2,7 @@
 
 <h1 align="center">Starbucks Twitter Sentiment Analysis </h1>
 <p align="center" width="100%">
-    <img width="40%" src="head_image.png">
+    <img width="80%" src="head_image.png">
 </p>
 
 
@@ -15,10 +15,9 @@ Apache Kafka, Spark Structured Streaming, Confluent Cloud, Databricks, Delta Lak
 
 The aim of the Starbucks Twitter Sentimental Analysis project is to build end-to-end twitter data streaming pipeline to analyze brand sentiment analysis. 
 
-
 <p align="center" width="100%">
-    <img width="40%" src="Twitter_Sentiment_Architecture.png">
-
+    <img width="100%" src="Tiwtter_Sentiment_Architecture.png">
+</p>
 
 ## 2. Environment Setup 
 
