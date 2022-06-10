@@ -20,9 +20,7 @@ The aim of the Starbucks Twitter Sentimental Analysis project is to build end-to
     <img width="40%" src="Twitter_Sentiment_Architecture.png">
 
 
-
 ## 2. Environment Setup 
-
 
 ### Step 1. Twitter API Credentials
 
@@ -122,7 +120,8 @@ CMD [ "python3", "producer/producer.py",
 
 ```
 
-#### Procedure to run the kafka twitter data ingestion 
+
+## Code: Procedure to run the kafka twitter data ingestion 
 
 ```Shell 
 pip install virtualenv
