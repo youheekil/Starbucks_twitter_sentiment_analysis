@@ -1,17 +1,25 @@
 # Starbucks Twitter Sentiment Analysis 
 
 
-## Tech Stack
- Kafka, Spark Streaming, Confluent Cloud, Databricks, Delta Lake, Spark NLP
+<h1 align="center">Starbucks Twitter Sentiment Analysis </h1>
+<p align="center" width="100%">
+    <img width="40%" src="head_image.png">
+</p>
 
+
+> Technologies used: 
+Apache Kafka, Spark Structured Streaming, Confluent Cloud, Databricks, Delta Lake, Spark NLP
+
+
+**All details of the project is well described in [HERE](https://youheekil.github.io/tags/sentiment-analysis/).**
 ## 1. Aim
 
 The aim of the Starbucks Twitter Sentimental Analysis project is to build end-to-end twitter data streaming pipeline to analyze brand sentiment analysis. 
 
 
-> `Brand sentiment analysis` is, to put it simply, a way of determining the general attitude toward your brand, product, or service. Nowadays, the easiest way to analyze brand sentiment is through media monitoring tools. Customers often express their feeling or option toward the brand on social media channels. These opinions will give insight on the brand's position. The sentimental is determined mostly just as positive, negative, or neutral ([MediaToolKit](https://www.mediatoolkit.com/blog/brand-sentiment-analysis/#:~:text=Brand%20sentiment%20analysis%20is%2C%20to,is%20through%20media%20monitoring%20tools.))
+<p align="center" width="100%">
+    <img width="40%" src="Twitter_Sentiment_Architecture.png">
 
-{{< figure src="project_overview.png" title="Project Overview" >}}
 
 
 ## 2. Environment Setup 
@@ -95,24 +103,7 @@ When you are creating a Cluster, you can find the `libraries` tab next next to `
 If you need any dependencies needed in the future, you can use this to install. Or you can install dependencies like this, `%pip install delta-spark spark-nlp==3.3.3 wordcloud contractions gensim pyldavis==3.2.0` too.  
 
 
-
-
-### Step 5. Source Code for twitter data ingestion
-
-{{< admonition type=note title="Required files for twitter real-time data ingestion" open=false >}}
-
-**Check the source codes in my [github page](https://github.com/youheekil/twitter-sentiment-analysis)** 
-
-* producer/producer.py
-* producer/ccloud_lib.py 
-* run.sh
-* Dockerfile
-* .env
-* requirements.txt
-{{< /admonition >}}
-
-
-#### Still some modifications are needed 
+### Step 5. Some modifications are needed for twitter data ingestion
 
 
 
@@ -142,5 +133,3 @@ virtualenv ccloud-venv
 source ./ccloud-venv/bin/activate
 bash run.sh
 ``` 
-
-
