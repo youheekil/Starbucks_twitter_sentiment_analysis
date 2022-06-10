@@ -21,6 +21,12 @@ The aim of the Starbucks Twitter Sentimental Analysis project is to build end-to
 
 ## 2. Environment Setup 
 
+* Set up the Virtual Environment
+```
+pip install virtualenv
+virtualenv --version # test your installation 
+virtualenv ccloud-venv
+```
 ### Step 1. Twitter API Credentials
 
 As we performed in the previous [post](https://youheekil.github.io/running-kafka-docker/), we need to get [Twitter API Credentials](https://developer.twitter.com/en/docs/twitter-api/getting-started/getting-access-to-the-twitter-api). After getting it, we save these credential information in `.env` file. 
@@ -77,31 +83,10 @@ Then, replace HOST, API_KEY, API_SECRET with the values from `Step 3`. Press `:w
 
 ### Step 4. Create a Databricks Cluster 
 
-In this post, we are going to deploy Databricks on the AWS. Instruction to create a Databricks Cluster on AWS is well explained in [HERE](https://www.youtube.com/watch?v=gU1BrfqMCYc). 
-
-Click the `compute` under navigator bar, create a `Create Cluster`, and add some configuration like below in the picture. 
-
-{{< figure src="cluster.png" title="Create a Databricks Cluster" >}}
-
-
-After creating a Databricks Cluster, it's time to explore the Databricks Workspace. Click the `Workspace` under navigator bar. Click the `users`, `<user-account>, then create a `Notebook`. 
-
-
-{{< figure src="workspace.png" title="Create a Databricks Workspace" >}}
-
-Once you are done with creating the Databricks Notebook, please check the my [github page](https://github.com/youheekil/twitter-sentiment-analysis) for the source code of twitter data ingestion. 
-
-
-#### Step 4-1. Install Dependencies 
-
-When you are creating a Cluster, you can find the `libraries` tab next next to `Configuration` tab. 
-
-If you need any dependencies needed in the future, you can use this to install. Or you can install dependencies like this, `%pip install delta-spark spark-nlp==3.3.3 wordcloud contractions gensim pyldavis==3.2.0` too.  
+Check [HERE](https://youheekil.github.io/project1-1.-starbucks-twitter-sentimental-analysis/#step-4-create-a-databricks-cluster) FOR the procedure of creating a Databricks Cluster
 
 
 ### Step 5. Some modifications are needed for twitter data ingestion
-
-
 
 ```dockerfile
 # Dockerfile
@@ -118,15 +103,11 @@ CMD [ "python3", "producer/producer.py",
   "-t", "<your-kafka-topic-name>" ]
 
 ```
-
-
-## Code: Procedure to run the kafka twitter data ingestion 
+## Build and run the Docker Container 
 
 ```Shell 
-pip install virtualenv
-virtualenv --version # test your installation 
-cd <your-project_folder> 
-virtualenv ccloud-venv
-source ./ccloud-venv/bin/activate
+# cd <your-project_folder> 
+# source ./ccloud-venv/bin/activate
+
 bash run.sh
 ``` 
