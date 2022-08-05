@@ -10,7 +10,7 @@
 Apache Kafka, Spark Structured Streaming, Confluent Cloud, Databricks, Delta Lake, Spark NLP
 
 
-**All details of the project is well described in [HERE](https://youheekil.github.io/tags/sentiment-analysis/).**
+**All details of the project is described in [HERE](https://youheekil.github.io/tags/sentiment-analysis/).**
 ## 1. Aim
 
 The aim of the Starbucks Twitter Sentimental Analysis project is to build end-to-end twitter data streaming pipeline to analyze brand sentiment analysis. 
