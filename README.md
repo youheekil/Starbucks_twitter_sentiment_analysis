@@ -113,4 +113,4 @@ bash run.sh
 ``` 
 
 ## Final Sentimental Analysis 
-Click [here](https://github.com/youheekil/twitter-sentiment-analysis/blob/main/Starbucks%20Sentiment%20Analysis.pdf) to check the presentation file
+Click [here](https://github.com/youheekil/twitter-sentiment-analysis/blob/main/Starbucks%20sentiment%20analysis.pdf) to check the presentation file
