@@ -111,3 +111,6 @@ CMD [ "python3", "producer/producer.py",
 
 bash run.sh
 ``` 
+
+### Final Sentimental Analysis 
+Click [here](https://github.com/youheekil/twitter-sentiment-analysis/blob/main/Starbucks%20Sentimental%20Analysis.pdf) to check the presentation file
